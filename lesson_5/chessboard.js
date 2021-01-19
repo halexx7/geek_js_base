@@ -10,7 +10,7 @@ class CheassBoard {
 
     drawNameColumn(arr) {
         let colName = container.appendChild(document.createElement("div"));
-        colName.setAttribute("class", "col__name");
+        colName.classList.add("col__name");
         for (let i = 0; i <= this.x; i++) {
             const field = document.createElement("span");
             field.setAttribute("class", "field");
@@ -21,10 +21,10 @@ class CheassBoard {
 
     drawNameRow(arr, board) {
         let rowName = board.appendChild(document.createElement("div"));
-        rowName.setAttribute("class", "chessboard__name-row");
+        rowName.classList.add("chessboard__name-row");
         for (let i = 0; i < this.y; i++) {
             const field =document.createElement("span");
-            field.setAttribute("class", "field");
+            field.classList.add("field");
             field.textContent = arr[i];
             rowName.appendChild(field);
         }
@@ -38,7 +38,7 @@ class CheassBoard {
 
         //Создаем div доски
         let chessBoard = document.createElement("div");
-        chessBoard.setAttribute("class", "chessboard");
+        chessBoard.classList.add("chessboard");
         container.appendChild(chessBoard);
 
         //Создаем div и присваиваем имена строкам от 1 до 8
@@ -46,13 +46,13 @@ class CheassBoard {
 
         //Создаем div игрового поля
         let gameField = document.createElement("div");
-        gameField.setAttribute("class", "chessboard__gamefield");
+        gameField.classList.add("chessboard__gamefield");
         chessBoard.appendChild(gameField);
     
         //Отрисовываем черно-белые поля
         for (let i = 0; i < this.y; i++) {
             let row = gameField.appendChild(document.createElement("div"));
-            row.setAttribute("class", "row");
+            row.classList.add("row");
     
             for (let j = 0; j < this.x; j++) {
                 const field = document.createElement("span");
@@ -60,17 +60,17 @@ class CheassBoard {
                 if ( i % 2 == 0 ) {
     
                     if ( j % 2 == 0 ) {
-                        field.setAttribute("class", "white  field");
+                        field.setAttribute('class', "white  field");
                     } else {
-                        field.setAttribute("class", "black  field");
+                        field.setAttribute('class', "black  field");
                     }
     
                 } else {
     
                     if ( j % 2 == 0 ) {
-                        field.setAttribute("class", "black  field");
+                        field.setAttribute('class', "black  field");
                     } else {
-                        field.setAttribute("class", "white  field");
+                        field.setAttribute('class', "white  field");
                     }
     
                 }
