@@ -423,6 +423,7 @@ class Basket {
     //Отрисовываем окно вывода инфорамции о заказе
     drawModalOrder() {
         modalBasket.textContent = '';
+        modalThanks.textContent = '';
 
         this.drawBasketClose();
 
@@ -535,7 +536,9 @@ document.addEventListener('click', function(e) {
     if ( e.target.classList.contains('close') ) {
         goodsModal.setAttribute('style', 'display: none');
         body.classList.remove('body__noscroll');
+        shopBasket.shopCart = {};
         shopBasket.drawBasketHeader();
+        currentWindow = 0;
     }
 });
 
@@ -575,8 +578,9 @@ document.addEventListener('change', function(e) {
 document.addEventListener('click', function(e) {
     if ( e.target.dataset.continue == 'continue' ) {
         shopBasket.shopCart = {};
+        shopBasket.drawBasketHeader();
         goodsModal.setAttribute('style', 'display: none');
         body.classList.remove('body__noscroll');
-        location.reload();
+        currentWindow = 0;
     }
 });
