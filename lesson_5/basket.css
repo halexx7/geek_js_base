@@ -1,0 +1,30 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+.catalog {
+    margin-bottom: 30px;
+}
+
+.catalog__title,
+.basket__title {
+    margin-bottom: 15px;
+
+    color: chocolate;
+}
+
+.product {
+    width: 200px;
+
+    display: flex;
+    justify-content: left;
+}
+
+.product__title {
+    max-width: 100px;
+}
+
+.product__price {
+    max-width: 40px;
+}
