@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Продуктовый интернет магазин</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__item">
+                <div class="header__logo">
+                    <a class="header__link" href="#">ProMag</a>
+                </div>
+                <div class="header__cart">
+                    <div class="header__cart-image">
+                        <img src="assets/img/cart_img.svg" alt="Корзина">
+                    </div>
+                    <div class="counter" id="headerCounter">
+                        <p class="counter__text" id="cartCounter">0</p>
+                    </div>
+                    <div class="price">
+                        <p class="price__text" id="headerPrice">0 руб.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page">
+        <div class="container">
+            
+            <div class="catalog" id="catalogItem"></div>
+            <div class="basket" id="basketItem"></div>
+
+        </div> <!-- ./container -->
+    </section>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
